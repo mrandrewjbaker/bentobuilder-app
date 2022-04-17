@@ -69,7 +69,7 @@ export const ProjectNewModule = (props: IProjectNewModule) => {
       </select>
       <br />
       <select onChange={onChange_moduleTypeSelector} defaultValue={newModule.type}>
-        <option value={0}>Select a Module Class</option>
+        <option value={0}>Select a Module Type</option>
         {
           moduleTypeOptions.map((moduleTypeOption, index)=>{
             return ( <option value={moduleTypeOption.value} key={index}>{moduleTypeOption.text}</option> )
