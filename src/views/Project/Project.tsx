@@ -28,7 +28,6 @@ export const Project = () => {
     dispatch(setShowCreateNewModule(true))
   }
 
-
   useEffect(() => {
     if(projectDetails.modules.length > 0) {
       const latestModule = projectDetails.modules[projectDetails.modules.length - 1]
@@ -40,6 +39,7 @@ export const Project = () => {
   useEffect(() => {
     setProjectDetails(ProjectState.value.project);
   }, [ProjectState.value.project])
+
 
   return (
     <div className={styles.Project}>
@@ -61,7 +61,7 @@ export const Project = () => {
                   break;
               }
               return (
-                <li key={index}>{moduleTypeEnums[module.class]}</li>
+                <li key={index}>{moduleTypeEnums[module.type]}</li>
               );
             })
           }
